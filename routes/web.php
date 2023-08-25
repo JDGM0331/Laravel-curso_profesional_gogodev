@@ -2,17 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+/* // Métodos staticos para construir rutas
+Route::view();
+Route::get('mi/ruta', ControladorDeLaRuta);
+Route::post('mi/ruta', ControladorDeLaRuta);
+Route::put('mi/ruta', ControladorDeLaRuta);
+Route::delete('mi/ruta', ControladorDeLaRuta);
+Route::patch('mi/ruta', ControladorDeLaRuta); */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/* Route::view('/', 'welcome')->name('welcome'); // Generar ruta para que renderice una vista estatica y especificarle una nombre */
+Route::view('/', 'landing.index')->name('index');
+Route::view('/about', 'landing.about')->name('about');
